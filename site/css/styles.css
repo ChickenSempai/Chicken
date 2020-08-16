@@ -1,0 +1,147 @@
+
+
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #4d0026;
+  font-family: 'Oxygen', sans-serif;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: #e65c00;
+  border-radius: 0;
+  border: 0;
+}
+
+#header-nav > .container {
+  width: 82%;
+}
+
+
+.navbar-brand {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Lora', serif;
+  color: #9999ff;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #100;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+
+.navbar-header button.navbar-toggle:focus, .navbar-header .navbar-toggle:hover {
+    background-color: #9999ff;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #951C49;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */
+
+
+/* HOME PAGE */
+
+#main-content {
+  width: 80%;
+}
+
+.menu-item-tile{
+    margin-bottom: 25px;
+
+}
+
+.menu-item-tile>div {
+  margin-bottom: 25px;
+  margin-right: 2px;
+  background-color: #951C49;
+}
+
+
+.menu-item-description {
+  padding-right: 10px;
+  padding-left: 10px;
+    
+}
+
+.menu-item-details {
+  font-size: .9em;
+  font-style: italic;
+}
+
+
+/* END HOME PAGE */
+
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+
+
+
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  /* End Header */
+
+
+  /* Home Page */
+
+}
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Header */
+
+  /* End Header */
+  
+  /* Home page */
+
+
+  .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
+  }
+}
+
+
+
