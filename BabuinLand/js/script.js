@@ -17,6 +17,7 @@ var homeHtmlUrl = "snippets/home-snippet.html";
 var BabuinListHtml = "snippets/Babuin-list.json";
 var BabuinItemHtml = "snippets/Babuin-item.html";
 var BabuinItemTitle = "snippets/Babuin-items-title.html";
+var PoetHtml = "snippets/poet-snippet.html"
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
   var targetElem = document.querySelector(selector);
@@ -81,8 +82,6 @@ dc.loadDegradation = function () {
 };
 
 
-
-
 // Builds HTML for the single category page based on the data
 // from the server
 function buildBabuinListHTML (list) {
@@ -136,6 +135,22 @@ function buildBabuinListViewHtml(list,
   finalHtml += "</section>";
   return finalHtml;
 }
+
+dc.loadAgression = function () {
+  showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+    PoetHtml,
+    function (html){
+      switchMenuToActive();
+      document.querySelector("#main-content")
+      .innerHTML = html;
+    }, false);
+};
+
+
+
+
+
 
 
 global.$dc = dc;

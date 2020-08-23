@@ -1,31 +1,36 @@
+/*BANANA     #ffbc5b     */
+/*METAL #121f28*/
+
 body {
   font-size: 16px;
-  color: #d05663;
-  background-image: linear-gradient(#c3cbd6, #748b6f);
+  color: #fff;
+  background-color: #cccccc;
+  /*background-image: linear-gradient(#c3cbd6, #748b6f);*/
+
   font-family: 'Oswald', sans-serif;
   box-sizing: border-box;
 }
 
 /** HEADER **/
 #header-nav {
-  background-color: #2a403d;
+  background-color: #121f28;
   border-radius: 0;
   border: 0;
 }
 
 #logo-img {
-  background: url('../images/denisLable.png') no-repeat;
+  background: url('../images/babuinLable.png') no-repeat;
   width: 100px;
   height: 100px;
-  margin: -20px 15px 10px 0;
+  margin: -20px 15px 0px 0;
 }
 
 .navbar-brand {
-  padding-top: 25px;
+  padding-top: 20px;
 }
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
-  color: #d05663;
+  color: #ffbc5b;
   font-size: 2em;
   text-transform: uppercase;
   font-weight: bold;
@@ -43,13 +48,24 @@ body {
   font-size: .7em;
   margin-top: 15px;
 }
+.navbar-brand h5 {
+  margin-top: 3px;
+  position: relative;
+  left:27px;
+  margin-bottom: 0px;
+}
+#navbarPhrase{
+  margin-top: 10px;
+  font-size: 0.8em;
+  font-style: italic;
+}
 
 #nav-list {
   margin-top: 10px;
 }
 #nav-list a {
   margin-left: 30px;
-  color: #D05663;
+  color: #ffbc5b;
   text-align: center;
 }
 #nav-list a:hover {
@@ -57,25 +73,23 @@ body {
 }
 
 #nav-list a  {
-  font-size: 1.2em;
+  font-size: 1.4em;
 
   }
-#nav-list a i {
-  font-size: 1.4em;
+#nav-list  i {
+  font-size: 1.3em;
 
 }
 
 hr {
-  border: 1px dashed #d05663;
+  border: 1px dashed #ffbc5b;
 }
 
 #navbarToggle{
-  border: 1px solid #D05663;
+  border: 1px solid #ffbc5b;
     background-color: #2a403d;
 }
-#navbarToggle i{
-  color:#d05663;
-}
+
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top: -30px;
@@ -84,10 +98,12 @@ hr {
 
 /* FOOTER */
 .panel-footer {
+  font-size: 1.4em;
+  color: #ffbc5b;
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 30px;
-  background-color: #2a403d;
+  background-color: #121f28;
   border-top: 0;
 }
 .panel-footer div.row {
@@ -99,12 +115,21 @@ hr {
 
 /* END FOOTER */
 
+#main-content{
 
+  background-color: #fff;
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
 
 /* HOME PAGE */
+
+
 .container .jumbotron {
-  box-shadow: 0 0 50px #D05663;
-  border: 2px solid #D05663;
+  position: relative;
+  top: 15px;
+  /*box-shadow: 0 0 30px #121f28;*/
+  border: 2px solid #ffbc5b;
 }
 
 #menu-tile, #specials-tile, #map-tile {
@@ -112,7 +137,7 @@ hr {
   width: 100%;
   margin-bottom: 15px;
   position: relative;
-  border: 2px solid #D05663;
+  border: 2px solid #ffbc5b;
   overflow: hidden;
   max-width: 500px;
   min-width: 300px;
@@ -142,20 +167,37 @@ hr {
   text-align: center;
   font-size: 1.6em;
   text-transform: uppercase;
-  background-color: #2a403d;
+  background-color: #121f28;
   color: #fff;
   opacity: .8;
 }
 /* END HOME PAGE */
 
-/* MENU CATEGORIES PAGE */
-.category-tile { 
-  position: relative;
-  border: 2px solid #3F0C1F;
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 15px;
+/* BABUIN POETRY PAGE */
+#poet-container{
+    background-image: url('../images/poet.jpg');
+    width: 100%;
+
+
+   background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.poet-item-tile {
+  margin-top:  30px;
+  color: #121f28;
+}
+.poet-item-content{
+    padding-left: 5%;
+}
+.poet-item-author{
+  padding-left: 5%;
+  padding-top: 20px;
+}
+.poet-item-title{
+  padding-left: 5%;
+}
+.poet-item-details{
+  padding-left: 15%;
 }
 .category-tile span {
   position: absolute;
@@ -176,14 +218,14 @@ hr {
 #menu-categories-title + div {
   margin-bottom: 50px;
 }
-/* END MENU CATEGORIES PAGE */
+/* END BABUIN POETRY PAGE */
 
-/* SINGLE CATEGORY PAGE */
+/* BABUIN LIST PAGE */
 
 #babuin-list-title{
   text-shadow: 1px 1px 1px #222;
   margin-bottom: 40px;
-  margin-top:20px;
+  margin-top:30px;
   font-size: 1.4em;
   background: #222;
   border: 1px solid #d05663;
@@ -239,17 +281,17 @@ h3.babuin-item-title {
   font-size: .9em;
 
 }
-/* END SINGLE CATEGORY PAGE */
+/* END BABUIN LIST PAGE */
 
 
-/********** Large devices only **********/
+/********** EXTRALarge devices only **********/
 @media (min-width: 1200px) {
   /* Header */
 
   /* End Header */
 }
 
-/********** Medium devices only **********/
+/********** LARGE devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
 
@@ -261,7 +303,7 @@ h3.babuin-item-title {
 
 }
 
-/********** Small devices only **********/
+/********** MEDIUM devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
   /* Header */
 #nav-list a {
@@ -275,7 +317,7 @@ h3.babuin-item-title {
   /* End Home Page */
 }
 
-/********** Extra small devices only **********/
+/********** SMALL devices only **********/
 @media (max-width: 767px) {
   /* Header */
   .navbar-brand {
@@ -290,9 +332,7 @@ h3.babuin-item-title {
     font-size: .6em;
     margin-top: 12px;
   }
-  .navbar-brand p img { /* Star-K */
-    height: 20px;
-  }
+
 
   #nav-list a {
   margin-left: 114px;
