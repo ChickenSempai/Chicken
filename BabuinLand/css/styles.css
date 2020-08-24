@@ -295,6 +295,12 @@ h3.babuin-item-title {
   font-size: .9em;
 
 }
+  .babuin-item-photo img{
+    width: 100%;
+    height: auto;
+
+  }
+
 /* END BABUIN LIST PAGE */
 
 /*BABUIN TECH*/
@@ -429,7 +435,7 @@ padding-bottom: 20px;
 
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
-@media (max-width: 479px) {
+@media (max-width: 522px) {
   /* Header */
   .navbar-brand h1 { /* Restaurant name */
     padding-top: 5px;
