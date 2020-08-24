@@ -17,7 +17,16 @@ var homeHtmlUrl = "snippets/home-snippet.html";
 var BabuinListHtml = "snippets/Babuin-list.json";
 var BabuinItemHtml = "snippets/Babuin-item.html";
 var BabuinItemTitle = "snippets/Babuin-items-title.html";
-var PoetHtml = "snippets/poet-snippet.html"
+var PoetHtml = "snippets/poet-snippet.html";
+var TechSupportHtml = "snippets/tech-support-snippet.html";
+
+function css(selector, property, value) {
+    for (var i=0; i<document.styleSheets.length;i++) {//Loop through all styles
+        //Try add rule
+        try { document.styleSheets[i].insertRule(selector+ ' {'+property+':'+value+'}', document.styleSheets[i].cssRules.length);
+        } catch(err) {try { document.styleSheets[i].addRule(selector, property+':'+value);} catch(err) {}}//IE
+    }
+}
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
   var targetElem = document.querySelector(selector);
@@ -27,7 +36,7 @@ var insertHtml = function (selector, html) {
 // Show loading icon inside element identified by 'selector'.
 var showLoading = function (selector) {
   var html = "<div class='text-center'>";
-  html += "<img src='images/ajax-loader.gif'></div>";
+  html += "<img id='loading' src='images/ajax-loader.gif'></div>";
   insertHtml(selector, html);
 };
 
@@ -69,7 +78,6 @@ $ajaxUtils.sendGetRequest(
   },
   false);
 });
-
 
 
 
@@ -144,12 +152,21 @@ dc.loadAgression = function () {
       switchMenuToActive();
       document.querySelector("#main-content")
       .innerHTML = html;
+      css("#main-content","background-color","#cccccc");
     }, false);
 };
 
 
-
-
+dc.loadTechSupport = function() {
+    showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+    TechSupportHtml,
+    function (html){
+      switchMenuToActive();
+      document.querySelector("#main-content")
+      .innerHTML = html;
+    }, false);
+}
 
 
 

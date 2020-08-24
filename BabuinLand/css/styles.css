@@ -11,6 +11,11 @@ body {
   box-sizing: border-box;
 }
 
+#loading{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 /** HEADER **/
 #header-nav {
   background-color: #121f28;
@@ -69,7 +74,7 @@ body {
   text-align: center;
 }
 #nav-list a:hover {
-  background: #c3cbd6;
+  background: #cccccc;
 }
 
 #nav-list a  {
@@ -87,7 +92,10 @@ hr {
 
 #navbarToggle{
   border: 1px solid #ffbc5b;
-    background-color: #2a403d;
+    background-color: #121f28;
+}
+#navbarToggle i {
+  color: #ffbc5b;
 }
 
 .navbar-header button.navbar-toggle {
@@ -123,7 +131,14 @@ hr {
 }
 
 /* HOME PAGE */
+#secret-button{
 
+  position: absolute;
+  top: 50%;
+  left:12%; 
+   width: 10%;
+  height: 9%;
+}
 
 .container .jumbotron {
   position: relative;
@@ -176,10 +191,9 @@ hr {
 /* BABUIN POETRY PAGE */
 #poet-container{
     background-image: url('../images/poet.jpg');
-    width: 100%;
-
-
-   background-size: 100% 100%;
+    max-width: 800px;
+   background-position-x: center;   
+    background-size:  800px 100%;
     background-attachment: fixed;
 }
 .poet-item-tile {
@@ -283,6 +297,28 @@ h3.babuin-item-title {
 }
 /* END BABUIN LIST PAGE */
 
+/*BABUIN TECH*/
+#tech-container{
+  position: relative;
+padding-top: 50px;
+padding-bottom: 20px;
+}
+
+#tech-container > img{
+  width:100%;
+
+}
+#tech-container button{
+  font-size:19px;
+  position: absolute;
+  bottom: 90px;
+  left: 100px;
+  width: 200px;
+  height: 60px;
+  background-color: #ffbc5b;
+}
+/*END BABUIN TECH*/
+
 
 /********** EXTRALarge devices only **********/
 @media (min-width: 1200px) {
@@ -315,6 +351,10 @@ h3.babuin-item-title {
   margin-left: 80px;
 }
   /* End Home Page */
+ #babuin-item-photo{
+  float: left;
+ }
+
 }
 
 /********** SMALL devices only **********/
